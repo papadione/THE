@@ -40,6 +40,7 @@
 
         # systemctl restart zabbix-server zabbix-agent apache2
         # systemctl enable zabbix-server zabbix-agent apache2
+        sudo apt install zabbix-agent2
 
 ## Installation de grafana 
     https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
@@ -71,8 +72,8 @@
             discovery.seed_hosts: []
         sudo systemctl restart elasticsearch
         /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
-        password: k53jGU-AwiqbWTJkyP56
-        curl -X GET "localhost:9200"
+        password: fUNowwhCdQMTOj_WFW4m
+        curl -k -u elastic https://localhost:9200
     
     3. Installation de logstash
 
@@ -128,7 +129,7 @@
         sudo git clone https://github.com/netbox-community/netbox.git .
 
         sudo adduser --system --group netbox
-        sudo chown --recursive netbox /opt/netbox/netbox/media/
+        sudo chown --recursive netbox /opt/netbox/docs/media/
         sudo chown --recursive netbox /opt/netbox/netbox/reports/
         sudo chown --recursive netbox /opt/netbox/netbox/scripts/
 
@@ -171,13 +172,4 @@
         sudo systemctl restart apache2
 
 
-
-
-
-
-
-J5brHrAXFLQSif0K
-
-python3 ../generate_secret_key.py
-_VfiqIYbGZHE*eJ5xFi&UG=b8ZKJ%h9bKp(iO4crpeCuJLJLoZ
 
